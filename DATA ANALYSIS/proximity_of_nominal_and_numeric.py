@@ -7,7 +7,7 @@ for i in f.readlines():
     print(i)
     l=i.strip().split()
     data[ii]=l
-    ii=ii+1
+    ii+=1
 #n denotes nominal attribute
 #o denotes numeric attribute
 s=len(data[1])
@@ -46,9 +46,31 @@ for i in range (ii-1):
         else: print(" ",end=" ")
     print()
 
+choice = int(input("press 1 to print simmilarity or 0 to EXIT\n"))
+while(choice):
+    type = input("enter numeric or nominal \n")
+    if(type=='nominal'):
+        i=int(input("enter ith object "))
+        j=int(input("enter jth object "))
+        if(d_mat1[i-1][j-1]==-1):
+            print(1-d_mat1[j-1][i-1])
+        else:
+            print(1-d_mat1[i-1][j-1])
+
+    if(type=='numeric'):
+        i=int(input("enter ith object "))
+        j=int(input("enter jth object "))
+        if(d_mat2[i-1][j-1]==0):
+            print(1-d_mat2[j-1][i-1])
+        else:
+            print(1-d_mat2[i-1][j-1])
+    choice = int(input("press 1 to print simmilarity or 0 to EXIT\n"))
+
+    
 #sample text file:
 #data.txt
 #n n    o  o
 #1 joel 10 20
 #2 joe  15 20
 #1 joel 16 30
+
