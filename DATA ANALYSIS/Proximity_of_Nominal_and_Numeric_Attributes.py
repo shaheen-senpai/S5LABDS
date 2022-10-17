@@ -1,4 +1,4 @@
-
+#credits ashmin
 def printer(mat, number_of_vals):
     for i in range(number_of_vals):
         for j in range(i + 1):

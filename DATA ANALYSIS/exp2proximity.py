@@ -1,4 +1,4 @@
-
+#credits Joel T
 class Data:
     def __init__(self,file):
         self.file=open(file,'r')
