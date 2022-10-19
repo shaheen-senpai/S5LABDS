@@ -1,0 +1,83 @@
+# 1. CUSTOMER-PRODUCT-PURCHASE RELATIONS
+
+**Aim :** write queries to create and retrieve customer and product relationship, constraints, built in
+functions, Group by, Order by, View drop, DML command.  
+
+**Table design :**  
+PURCHASE (order_no notnull int,custno notnull int, prono varchar(15) notnull,quantity
+notnull int, orderdate date, primarykey order_no, foreignkey cust no, foreignkey prono)  
+  
+PRODUCT (product_no notnull varchar(15),description notnul lvarchar(15), company
+notnull varchar(15),price notnull int, primarykey product_no)  
+  
+CUSTOMER (cust_no notnull varchar(15), name notnullvarchar(15), age notnull int,city
+notnull varchar(15), pincode notnull int, state notnullvarchar(15), primarykey cust_no)  
+  
+SUPPLIER (s_no notnull varchar(10), sname notnullvarchar(15), age notnull int,city notnull
+varchar(15), primarykey sno)  
+
+sample instances of these tables are given below   
+
+PURCHASE :  
+ORDER_NO CUSTNO PRODNO QUANTITY ORDERDATE  
+O00001 C00002 P00003 2 20-JAN-16  
+O00002 C00003 P00002 1 27-JAN-16  
+O00003 C00006 P00001 3 20-FEB-16  
+O00004 C00003 P00005 4 07-APR-16  
+O00005 C00004 P00002 2 22-MAY-16  
+O00006 C00005 P00004 1 26-MAY-16  
+  
+PRODUCT  
+PRODUCT_NO DESCRIPTION COMPANY PRICE  
+P00001 12 W Flood Light Wipro 5000  
+P00002 Laptop Adapter Dell 1560  
+P00003 Tablet HCL 11000  
+P00004 Garnet 50W led Wipro 999  
+P00005 Laptop Charger HCL 1690  
+  
+CUSTOMER  
+CUST_NO NAME AGE CITY PINCODE STATE  
+C00001 Ivan Bayross 35 Bombay 400054 Maharashtra  
+C00002 Vandana Saitwal 35 Madras 780001 Tamilnadu  
+C00003 Pramada Jaguste 55 Bombay 400057 Maharashtra  
+C00004 Basu Navindgi 45 Bombay 400056 Maharashtra  
+C00005 Ravi Sreedharan 25 Delhi 100001 Delhi  
+C00006 Rukmini 25 Madras 780001 Tamilnadu  
+  
+SUPPLIER  
+S_NO SNAME AGE CITY  
+S001 Ivan Bayross 35 Bombay  
+S002 Nirmala Agarwal 35 Madras  
+C003 Susmitha 55 Bombay  
+C004 Basu Navindgi 45 Bombay  
+C005 Ravi Sreedharan 25 Delhi  
+C006 Nanda Gopal 25 Madras  
+  
+Questions  
+1. List all customers in Madras  
+2. List all customer- numbers of all who purchase the product in the month of January  
+3. List all the name of company whose price is greater than 5000?  
+4. List all the customers whose name is not beginning with ‘r’?  
+5. Add email field into the customer table?  
+6. List all the customers whose age is greater than 40 in Maharashtra?  
+7. Display the company’s name in the increasing order of price?  
+8. Calculate average age of customers from table customer.  
+9. List cities of customers from states Maharashtra & Tamil Nadu.  
+10. Find average price from table product.  
+11. List all customer nos in the increasing order of quantity from table purchase.  
+12. Update product number of customer number C00003 to P00008.  
+13. Find the number of customers from city Delhi.  
+14. List customer number of all customers who have purchased more than 3 items.  
+15. Modify the structure of order date field in the purchase into character.  
+16. Find min and max price from product table.  
+17. Find number of products by Wipro and HCL separately.  
+18. List all customers in alphabetical order.  
+19. Sort the content of purchase table in descending order of date.  
+20. Delete the product with product_no = P00003  
+21. Copy the contents of field order_no and orderdate of purchase table into new table.  
+22. Delete the newly created table.  
+23. Create view of customer table.  
+24. List names of customers who have placed more than one order.  
+25. Retrieve transaction details of customer who lives in same city, obtain the result through self -join and correlated join.   
+26. Retrieve customer names starting with ‘R’.  
+27. List names of persons who are either a supplier or a customer.  
