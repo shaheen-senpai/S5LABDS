@@ -11,9 +11,9 @@
 7. SELECT COUNT(*) FROM Customer WHERE City LIKE 'T%';  
 8. SELECT * FROM Customer WHERE Cust_name LIKE 'D%' AND LENGTH(Cust_name) >= 4;  
 9. SELECT * FROM Customer WHERE City LIKE 'K%' AND LENGTH(City) >= 2;  
-10.SELECT * FROM Customer WHERE City LIKE 'K%' AND LENGTH(City) >= 7;  
-11.SELECT * FROM Customer WHERE City LIKE 'K%m';  
-12.SELECT salesman_ID, SUM(Discount) AS 'Total Discount', MAX(Discount) AS 'Maximum Discount' FROM Customer GROUP BY salesman_ID;  
-13.SELECT UPPER(City) FROM Customer;  
-14.UPDATE Customer SET salesman_ID = REPLACE(salesman_ID, 'Ekm', '') WHERE City = 'Ernakulam';  
-15.SELECT salesman_ID, SUM(Amount) AS 'Total Sales', MAX(Discount) AS 'Maximum Discount', CURDATE() AS 'Today' FROM Customer GROUP BY salesman_ID;  
+10. SELECT * FROM Customer WHERE City LIKE 'K%' AND LENGTH(City) >= 7;  
+11. SELECT * FROM Customer WHERE City LIKE 'K%m';  
+12. SELECT salesman_ID, SUM(Discount) AS 'Total Discount', MAX(Discount) AS 'Maximum Discount' FROM Customer GROUP BY salesman_ID;  
+13. SELECT UPPER(City) FROM Customer;  
+14. UPDATE Customer SET salesman_ID = REPLACE(salesman_ID, 'Ekm', '') WHERE City = 'Ernakulam';  
+15. SELECT salesman_ID, SUM(Amount) AS 'Total Sales', MAX(Discount) AS 'Maximum Discount', CURDATE() AS 'Today' FROM Customer GROUP BY salesman_ID;  
