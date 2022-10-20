@@ -1,0 +1,9 @@
+TID  items
+1   a b 
+2   a b c
+3   a c d
+4   a d
+5   b d
+6   b c d
+7   a b c d
+8   b c
