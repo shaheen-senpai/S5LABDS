@@ -1,3 +1,4 @@
+#credits senpai
 #correlation b/w nominal
 #Chi-square
 nominal = input("Enter the nominal values\n").strip().split()
@@ -10,7 +11,7 @@ l=[] #data
 for i in range (r):
 	a=[]
 	for j in range (c):
-		print("enter ",nominal[i],attributes[j]) #inputing data
+		print("enter freq of ",nominal[i],attributes[j]) #inputing data
 		a.append(int(input()))
 	l.append(a)
 	
@@ -43,6 +44,9 @@ for i in range(c):           #chi-square calculation
 
 print("calculated value of chi-square = ",chi)
 print("degree of freedom = ",dof)
+x=int(input("enter table value"))
+if(chi>x):print("dependent")
+else:print("independent")
 ##############################################################################################
 #correlation b/w numeric
 #correlation coeifficient
@@ -54,7 +58,7 @@ for i in (input("enter values of attribute A ").strip().split()):
 for i in (input("enter values of attribute b ").strip().split()):
     b.append(float(i))
 if(len(a)!=len(b)): 
-    print("no of samples incorrect")
+    print("no of samples miss-match")
     exit(0)
 mean_A = float(sum(a)/len(a))
 mean_B = float(sum(b)/len(b))
