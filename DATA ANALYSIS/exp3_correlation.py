@@ -66,8 +66,9 @@ asum,bsum,num,denom=0,0,0,0
 
 #calculating correlation coefficient R
 for i in range(len(a)):
-    asum += a[i]-mean_A
-    bsum += b[i]-mean_B
-    denom += float(float( float( asum**2) * float(bsum**2) )**0.5)
-    num += float((asum)*(bsum))
-print("R = ",float(num/denom))
+    asum += (a[i]-mean_A)**2
+    bsum += (b[i]-mean_B)**2
+    num += (a[i]-mean_A)*(b[i]-mean_B)
+denom = (asum*bsum)**0.5
+R = num/denom
+print("correlation coefficient = ",R)
