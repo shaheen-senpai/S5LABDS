@@ -1,5 +1,7 @@
 #Apriori Algorithm
 #Note i used combinations and brute forced the algorithm thus it will not have a good time complexity and can't handle really big data sets.
+#credits senpai
+
 from itertools import combinations
 def union(lst1, lst2):    #list join operation
     final_list = list(set(lst1) | set(lst2))
