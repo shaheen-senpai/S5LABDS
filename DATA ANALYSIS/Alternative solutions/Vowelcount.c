@@ -19,8 +19,8 @@ else if((int)x >= 97 && (int)x <= 122)
 count_of_consonants++;
 i++;
 }
-printf("The count of spaces in the string is : %d\n", count_of_spaces);
-printf("The count of vowels in the string is : %d\n", count_of_vowels);
-printf("The count of consonants in the string is : %d\n", count_of_consonants);
+printf("No of spaces in string is : %d\n", count_of_spaces);
+printf("No of vowels in string is : %d\n", count_of_vowels);
+printf("No of consonants in string is : %d\n", count_of_consonants);
 return 0;
 }
