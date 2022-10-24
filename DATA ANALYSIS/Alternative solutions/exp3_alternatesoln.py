@@ -1,3 +1,4 @@
+#credits jojo
 n=int(input("Enter the number of tuples of numerical"))
 r1=int(input("Enter the number of tuples of data set of nominal attrribute(rows) "))
 c1=int(input("Enter the number of attribute of data set of nominal attrribute(columns) "))
