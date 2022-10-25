@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+//this code finds the number of cf. this code uses C++ language, which is a high-level general-purpose programming language created by Danish computer scientist Bjarne Stroustrup as an extension of the C programming language, or "C with Classes".
+
 int main()
 {
     ios_base::sync_with_stdio(false);
