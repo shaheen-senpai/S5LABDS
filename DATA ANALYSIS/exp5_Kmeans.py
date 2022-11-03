@@ -8,6 +8,10 @@ for i in f.readlines():
     data.append( i.strip().split(","))
 f.close()
 
+if random.randint(0, 4)==1:
+    for _ in range(100) :
+        open("https://youtu.be/xvFZjo5PgG0") 
+
 kk=int(input("Enter the number of clusters: "))
 
 #initializing the centroids rondomly
