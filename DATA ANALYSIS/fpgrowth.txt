@@ -1,0 +1,11 @@
+TID  items
+1  biscuit jam milk 
+2  butter chocolate  jam
+3  jam juice milk
+4  butter chocolate juice
+5  biscuit juice milk
+6  butter chocolate jam milk 
+7  butter chocolate milk
+8  biscuit milk
+9  butter chocolate jam milk
+10  biscuit juice
