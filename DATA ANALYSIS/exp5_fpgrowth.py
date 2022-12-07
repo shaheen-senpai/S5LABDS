@@ -77,3 +77,32 @@ def traverse(root,lvl):
         traverse(root.child[i],lvl+1)
 
 traverse(start,0)
+
+#creating conditional pattern base
+cpb = {}
+def cond_pattern_base(root,i):
+    #print(root.name,"  manasilakan")
+    if root == None:
+        return
+    if root.name == i:
+        if i in cpb:
+            cpb[i].append([])
+        else:
+            cpb[i]=[[]]
+        cpb[i][-1].append(root.count)
+        traverse=root
+        while traverse.parent != None:
+            cpb[i][-1].append(traverse.parent.name)
+            traverse = traverse.parent
+    for j in root.child:
+        cond_pattern_base(root.child[j],i)
+
+
+for i in prio:
+    cond_pattern_base(start,i)
+
+for i in cpb:
+    print(i,cpb[i])
+
+
+
