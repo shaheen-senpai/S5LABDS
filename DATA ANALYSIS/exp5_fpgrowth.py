@@ -57,6 +57,8 @@ for i in range(1,ii): #inserting data into fp tree
         if j in current.child:
             current = current.child[j]
             current.count += 1
+            current.parent = root
+            root = current         
         else:
             current.child[j] = Node()
             current = current.child[j]
@@ -103,6 +105,3 @@ for i in prio:
 
 for i in cpb:
     print(i,cpb[i])
-
-
-
