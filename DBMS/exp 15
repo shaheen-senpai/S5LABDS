@@ -1,0 +1,26 @@
+create table author( author_id varchar(3) not null primary key, name varchar(5) not null, email varchar(10) not null, phone_a number(10), status varchar(5) );
+
+
+create table book_author( book_id varchar(3) not null primary key, author_id number(3), foreign key(author_id) references author(author_id) ON DELETE CASCADE );
+
+
+create table publisher( publisher_id varchar(3) not null primary key, name varchar(5) not null, address varchar(5) );
+
+
+create table language( language_id varchar(3) not null primary key, name varchar(10) );
+
+
+create table book( book_id varchar(3) not null primary key, title varchar(5), language_id varchar(3) not null, mrp number(5), publisher_id varchar(3) not null, published_date date, volume varchar(2), status varchar(5), foreign key(language_id) references language(language_id), foreign key(publisher_id) references publisher(publisher_id)  );
+
+
+create table member( member_id varchar(3) not null primary key, name varchar(5) not null, branch_code varchar(3), roll_no number(3), phone_m number(10), email varchar(10), DOJ date, status varchar(5) );
+
+
+create table book_issue( issue_id varchar(3) not null primary key, DOI date, book_id varchar(3) not null, member_id varchar(3) not null, expected_DOR date, status varchar(5), foreign key(book_id) references book(book_id) ON DELETE CASCADE, foreign key(member_id) references member(member_id) ON DELETE CASCADE );
+
+
+create table book_return( issue_id varchar(3) not null primary key, actual_DOR date, late_days number(3), late_fee number(5), foreign key(issue_id) references book_issue(issue_id) ON DELETE CASCADE );
+
+
+create table late_fee(from_days number(5), to_days number(5), amount number(5) );
+
