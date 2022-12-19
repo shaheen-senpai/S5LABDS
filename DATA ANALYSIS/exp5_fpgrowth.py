@@ -5,6 +5,9 @@ def union(lst1, lst2):    #list join operation
     final_list.sort()     #lexiographical order
     return final_list
 
+def intersection(lst1, lst2):
+    return list(set(lst1) & set(lst2))
+
 f=open("fpgrowth.txt","r")
 data={}
 items=[]
@@ -83,7 +86,6 @@ traverse(start,0)
 #creating conditional pattern base
 cpb = {}
 def cond_pattern_base(root,i):
-    #print(root.name,"  manasilakan")
     if root == None:
         return
     if root.name == i:
@@ -93,15 +95,43 @@ def cond_pattern_base(root,i):
             cpb[i]=[[]]
         cpb[i][-1].append(root.count)
         traverse=root
-        while traverse.parent != None:
+        while traverse.parent.name != 'root':
             cpb[i][-1].append(traverse.parent.name)
             traverse = traverse.parent
     for j in root.child:
         cond_pattern_base(root.child[j],i)
-
 
 for i in prio:
     cond_pattern_base(start,i)
 
 for i in cpb:
     print(i,cpb[i])
+    
+#creating conditional fp tree
+for i in cpb:
+    root = Node()
+    st = root
+    root.name = i
+    for j in cpb[i]:
+        current = root
+        for k in j[1::1]:
+            if k in current.child:
+                current = current.child[k]
+                current.count += j[0]
+                current.parent = root
+                root = current
+            else:
+                current.child[k] = Node()
+                current = current.child[k]
+                current.name = k
+                current.count += j[0]
+                current.parent = root
+                root = current
+        root = st
+    traverse(root,0)
+    
+    
+
+            
+            
+        
